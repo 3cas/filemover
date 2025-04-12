@@ -4,6 +4,8 @@ html, body {
     display: flex;
     flex-direction: row;
     flex: 1;
+    justify-content: space-evenly;
+    overflow: hidden;
 }
 
 div {
@@ -11,8 +13,105 @@ div {
     align-items: center;
 }
 
+p, span, label, h1, h2, input, th, td {
+    font-family: system-ui, Arial, Helvetica, sans-serif;
+}
+
 .fancy-group {
+    position: relative;
+    margin: 1rem;
+    width: 320px;
+    /* or whatever fits your layout */
+}
+
+.fancy-input {
+    border: 2px solid #4a90e2;
+    border-radius: 2px;
+    padding: 0.6rem;
+    /* Top padding makes room for the floating label */
+    font-size: 0.9rem;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
     flex-direction: column;
+}
+
+.fancy-label-row {
+    position: absolute;
+    top: -0.375rem;
+    left: 1rem;
+    right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.4rem;
+    height: 1rem;
+    line-height: 1rem;
+    pointer-events: none;
+    /* prevent weird label clicks */
+}
+
+.fancy-label {
+    font-size: 0.9rem;
+    color: #333;
+    background: white;
+    pointer-events: auto;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+.fancy-buttons {
+    display: flex;
+    gap: 0.3rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    pointer-events: auto;
+    background: white;
+}
+
+.icon-button {
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 1px;
+    font-family: system-ui, sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.icon-button img {
+    width: 14px;
+    height: 14px;
+    display: block;
+}
+
+.h-divider {
+    width: 100%;
+    /* Ensure it stretches to fill the parent */
+    height: 1px;
+    /* Line thickness */
+    background-color: black;
+    /* Line color */
+    margin: 0;
+    /* Remove default margins */
+}
+
+.blue {
+    background: lightskyblue;
+}
+
+.green {
+    background: lightgreen;
+}
+
+.yellow {
+    background: yellow;
+}
+
+#dirsList {
+    width: 100%;
 }
 
 #logo {
@@ -21,24 +120,24 @@ div {
 }
 
 #controls {
-    height: 100%;
     flex-direction: column;
     justify-content: flex-start;
 }
 
 #viewer {
-    height: 100%;
     flex: 1;
     flex-direction: column;
     justify-content: space-between;
+    margin: 0px 100px;
 }
 
-#viewer-top {
+#viewerTop {
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
 }
 
-#viewer-center {
+#viewerCenter {
     flex: 1;
     justify-content: center;
     border: 1px dotted darkcyan;
@@ -46,7 +145,8 @@ div {
     min-height: 300px;
 }
 
-#viewer-bottom {
+#viewerBottom {
     flex-direction: row;
     justify-content: center;
 }
+
