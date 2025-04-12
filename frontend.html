@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileMover</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/themes/aeroblue.css"
+    <script src="/assets/functions.js"></script>
+</head>
+<body>
+    <div id="controls">
+        <img id="logo" src="/assets/Fylodex-logo.png" alt="Fylodex logo">
+        <div class="fancy-group">
+            <div class="button-group">
+                <label for="searchDir">search dir</label>
+                <button id="searchOpen" hidden class="icon-button">
+                    <img src="/assets/icons/open.png">
+                </button>
+                <button id="searchSave" class="icon-button">
+                    <img src="/assets/icons/save.png">
+                </button>
+            </div>
+            <input type="text" id="searchDir">
+        </div>
+        <div class="fancy-group">
+            <div class="button-group">
+                <label for="outputDir">output top</label>
+                <button id="outputOpen" hidden class="icon-button">
+                    <img src="/assets/icons/open.png">
+                </button>
+                <button id="outputSave" class="icon-button">
+                    <img src="/assets/icons/save.png">
+                </button>
+            </div>
+            <input type="text" id="outputDir">
+        </div>
+        <div class="fancy-group">
+            <div class="button-group">
+                <label>keybind dirs</label>
+                <button id="dirsReload" class="icon-button">
+                    <img src="/assets/icons/reload.png">
+                </button>
+            </div>
+            <table id="dirsList">
+                <tr>
+                    <th>folder</th>
+                    <th>count</th>
+                    <th>keybind</th>
+                </tr>
+                <tr id="keybind-example">
+                    <td>example</td>
+                    <td>999</td>
+                    <td>
+                        <button class="keybind-button">
+                            E
+                        </button>
+                    </td>
+                </tr>
+            </table>
+            <hr>
+            <div id="scheme-info">
+                <span>scheme:</span>
+                <span id="scheme-name">SchemeName</span>
+            </div>
+            <div id="scheme-buttons">
+                <button>save</button>
+                <button>load</button>
+                <button>overwrite</button>
+            </div>
+        </div>
+    </div>
+    <div id="viewer">
+        <div id="viewer-top">
+            <div id="fileData">
+                <span id="fileSize">20MB</span>
+                <span id="fileRes">800x600</span>
+            </div>
+            <div id="fileName">
+                <input type="text" id="nameInput" disabled value="filename.png">
+                <button id="rename" class="icon-button">
+                    <img src="/assets/icons/editname.png">
+                </button>
+            </div>
+            <div id="folderInfo">
+                <span id="folderProg">7 of 328</span>
+                <label for="filterType">filter:</label>
+                <select name="filterType" id="filterType">
+                    <option value="all">All</option>
+                    <option value="images">Images</option>
+                    <option value="media">Media</option>
+                    <option value="nonmedia">Nonmedia</option>
+                    <option value="custom">Custom</option>
+                </select>
+            </div>
+        </div>
+        <div id="viewer-center">
+            <div id="fileViewer">
+                file goes here
+            </div>
+        </div>
+        <div id="viewer-bottom">
+            <button id="filePrev" class="icon-button">
+                <img src="/assets/icons/prev.png">
+            </button>
+            <button id="fileReload" class="icon-button">
+                <img src="/assets/icons/reload.png">
+            </button>
+            <button id="fileNext" class="icon-button">
+                <img src="/assets/icons/next.png">
+            </button>
+        </div>
+    </div>
+</body>
+</html>
