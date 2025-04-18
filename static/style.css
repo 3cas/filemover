@@ -17,6 +17,17 @@ p, span, label, h1, h2, input, th, td {
     font-family: system-ui, Arial, Helvetica, sans-serif;
 }
 
+table {
+    border: 1px solid darkgray;
+    background: lightgray;
+    padding: 3px;
+    margin-top: 5px;
+}
+
+td {
+    text-align: center;
+}
+
 .fancy-group {
     position: relative;
     margin: 1rem;
@@ -24,7 +35,7 @@ p, span, label, h1, h2, input, th, td {
     /* or whatever fits your layout */
 }
 
-.fancy-input {
+.fancy-content {
     border: 2px solid #4a90e2;
     border-radius: 2px;
     padding: 0.6rem;
@@ -87,17 +98,6 @@ p, span, label, h1, h2, input, th, td {
     display: block;
 }
 
-.h-divider {
-    width: 100%;
-    /* Ensure it stretches to fill the parent */
-    height: 1px;
-    /* Line thickness */
-    background-color: black;
-    /* Line color */
-    margin: 0;
-    /* Remove default margins */
-}
-
 .blue {
     background: lightskyblue;
 }
@@ -107,7 +107,7 @@ p, span, label, h1, h2, input, th, td {
 }
 
 .yellow {
-    background: yellow;
+    background: rgb(255, 255, 117);
 }
 
 #dirsList {
@@ -128,7 +128,8 @@ p, span, label, h1, h2, input, th, td {
     flex: 1;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0px 100px;
+    margin-left: 100px;
+    background: lightcyan;
 }
 
 #viewerTop {

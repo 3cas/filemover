@@ -4,15 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fylodex: Keybind file mover</title>
-    <link rel="stylesheet" href="/assets/style.css">
-    <link rel="stylesheet" href="/themes/aeroblue.css" <script src="/assets/functions.js">
-    </script>
+    <title>Fylodex: Organize Everything!</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/api.js"></script>
 </head>
 
 <body>
     <div id="controls">
-        <img id="logo" src="/assets/Fylodex-logo.png" alt="Fylodex logo">
+        <img id="logo" src="/static/Fylodex-logo.png" alt="Fylodex logo">
+
+        <div class="fancy-group">
+            <div class="fancy-label-row">
+                <label class="fancy-label">Config File</label>
+            </div>
+            <div class="fancy-content">
+                <div id="scheme-info">
+                    <span>Scheme:</span>
+                    <span id="scheme-name">SchemeName</span>
+                </div>
+                <div id="scheme-buttons">
+                    <button>Save</button>
+                    <button>Load</button>
+                    <button>Overwrite</button>
+                </div>
+            </div>      
+        </div>
+        
+
         <div class="fancy-group">
             <div class="fancy-label-row">
                 <label for="searchDir" class="fancy-label">Search Dir</label>
@@ -21,7 +39,7 @@
                     <button id="searchSave" class="icon-button green">💾</button>
                 </div>
             </div>
-            <input type="text" id="searchDir" class="fancy-input" />
+            <input type="text" id="searchDir" class="fancy-content" />
         </div>
 
         <div class="fancy-group">
@@ -32,17 +50,17 @@
                     <button id="outputSave" class="icon-button green">💾</button>
                 </div>
             </div>
-            <input type="text" id="outputDir" class="fancy-input" />
+            <input type="text" id="outputDir" class="fancy-content" />
         </div>
 
         <div class="fancy-group">
             <div class="fancy-label-row">
-            <label class="fancy-label">Keybind Dirs</label>
-            <div class="fancy-buttons">
-                <button id="dirsReload" class="icon-button yellow">🔃</button>
+                <label class="fancy-label">Keybind Dirs</label>
+                <div class="fancy-buttons">
+                    <button id="dirsReload" class="icon-button yellow">🔄</button>
+                </div>
             </div>
-            </div>
-            <div class="fancy-input">
+            <div class="fancy-content">
                 <table id="dirsList">
                     <tr>
                         <th>Folder</th>
@@ -59,16 +77,6 @@
                         </td>
                     </tr>
                 </table>
-                <div class="h-divider"></div>
-                <div id="scheme-info">
-                    <span>Scheme:</span>
-                    <span id="scheme-name">SchemeName</span>
-                </div>
-                <div id="scheme-buttons">
-                    <button>Save</button>
-                    <button>Load</button>
-                    <button>Overwrite</button>
-                </div>
             </div>
             
         </div>
@@ -101,14 +109,9 @@
             </div>
         </div>
         <div id="viewerBottom">
-            <button id="btnFilePrev" class="icon-button">
-                <img src="/assets/icons/prev.png">
-            </button>
-            <button id="btnFileReload" class="icon-button">
-                <img src="/assets/icons/reload.png">
-            </button>
-            <button id="btnFileNext" class="icon-button">
-                <img src="/assets/icons/next.png">
+            <button id="btnFilePrev" class="icon-button">⏮️</button>
+            <button id="btnFileReload" class="icon-button">🔄</button>
+            <button id="btnFileNext" class="icon-button">⏭️</button>
             </button>
         </div>
     </div>
